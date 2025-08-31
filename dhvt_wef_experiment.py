@@ -1,18 +1,3 @@
-"""
-DHVT-WEF-Ti 优化版本 v2 
-======================
-
-目标超越DHVT-T基线
-
-主要优化：
-1. 模型容量: embed_dim 224, num_heads 4
-2. WEF参数: alpha_scale 0.15→0.10, g2/g3 1.0/0.0→0.8/0.2, 投影linear→mlp
-3. 训练策略: lr 0.001→0.0015, warmup 10→15轮, weight_decay 0.05→0.03
-4. 正则化: dropout 0.05→0.08, drop_path 0.1→0.15, label_smoothing 0.1→0.15
-5. 数据增强: mixup_alpha 0.4→0.6, cutout_length 12→16
-
-"""
-
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
